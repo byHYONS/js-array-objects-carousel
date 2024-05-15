@@ -1,6 +1,10 @@
 // reset
 'use strict';
 
+// definisco variabili per la lettura del DOM:
+const fotoPrinciale = document.querySelector('.items');
+const fotoMiniature = document.querySelector('.thumbs');
+
 // definisco una variable di un arrey d'oggetti:
 const images = [
     {
@@ -26,4 +30,35 @@ const images = [
     }
 ];
 
-console.log(images[0]);
+
+let count = 0;
+
+for (let element of images) {
+    // FOTO PRINCIPALE
+    // costruisco il div che ospiterà le foto, il titolo e il testo:
+    const contenitoreFoto = document.createElement('div');
+    contenitoreFoto.classList.add('item');
+    if (count === 0) contenitoreFoto.classList.add('active');
+
+    const immagine = document.createElement('img');
+    immagine.src = `${element.image}`;
+
+    const titolo = document.createElement('h2');
+    titolo.textContent = `${element.title}`;
+    
+    const testo = document.createElement('p');
+    testo.textContent = `${element.text}`;
+
+    contenitoreFoto.append(titolo);
+    contenitoreFoto.append(testo);
+    contenitoreFoto.append(immagine);
+    fotoPrinciale.append(contenitoreFoto);
+
+    const fotoThumb = document.createElement('div');
+    fotoThumb.classList.add('active');
+
+    
+   
+    count++;
+
+}

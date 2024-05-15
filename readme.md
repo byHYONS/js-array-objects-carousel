@@ -24,4 +24,15 @@ Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi)
 Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 
 ## Svolgimento:
-1. 
+1. definisco variabile di arrey d'oggetti;
+2. definisco le variabili per la lettura del DOM;
+3. ciclo l'arrey d'oggetti con il coclo for...of:
+```
+for (let element of images) { ... }
+```
+4. costruisco il div che ospiterà le foto, il titolo e il testo, aggiungendo la classe del div.
+Con una istruzione condizionale do la classe `active` al verificarsi della condizione:
+```
+if (count === 0) contenitoreFoto.classList.add('active');
+```
+5. 
