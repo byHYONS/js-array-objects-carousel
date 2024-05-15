@@ -1,9 +1,11 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* style */
 .container {
     width: 900px;
     height: 100vh;
@@ -99,3 +101,5 @@
     left: 50%;
     transform: translate(-50%) rotate(135deg);
 }
+
+/* fine */
