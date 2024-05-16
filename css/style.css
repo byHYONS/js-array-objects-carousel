@@ -17,18 +17,20 @@
 .items {
     width: 700px;
     height: 300px;
+    position: relative;
 }
 
 .item {
     height: 100%;
     display: none;
-    position: relative;
+   
 }
 
 .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .item.active {

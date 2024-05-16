@@ -35,4 +35,7 @@ Con una istruzione condizionale do la classe `active` al verificarsi della condi
 ```
 if (count === 0) contenitoreFoto.classList.add('active');
 ```
-5. 
+5. vado in ascolto sui nuovi elementi creati con `querySelectorAll` per crearmi un nodeList che poi andrò a ciclare con il `forEach`. Leverò la classe `.active` e impostero una condizione per riattivare la classe:
+```
+
+```
