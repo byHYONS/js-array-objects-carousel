@@ -1,6 +1,10 @@
 // reset
 'use strict';
 
+/* *******************************
+             VARIABILI
+******************************* */
+
 // definisco una variable di un arrey d'oggetti:
 const images = [
     {
@@ -37,6 +41,10 @@ const classItem = 'item';
 const classThumb = 'thumb';
 
 
+/* *******************************
+        LOGICA PRINCIPALE
+******************************* */
+
 // definisco variabile di partenza:
 let currentImage = 0;
 
@@ -56,9 +64,9 @@ console.log(newItems);
 const newThumbs = document.querySelectorAll('.thumb');
 console.log(currentImage);
 
-// vado in ascolto dei bottoni su:
+// vado in ascolto del bottone su:
 frecciaSu.addEventListener('click', () => {
-    console.log('CIAO!!!');
+    // console.log('CIAO!!!');
 
     newItems[currentImage].classList.remove('active');
     newThumbs[currentImage].classList.remove('active');
@@ -74,7 +82,7 @@ frecciaSu.addEventListener('click', () => {
     newThumbs[currentImage].classList.add('active');
 });
 
-// vado in ascolto dei bottoni giù:
+// vado in ascolto del bottone giù:
 frecciaGiu.addEventListener('click', () => {
 
     newItems[currentImage].classList.remove('active');
@@ -92,7 +100,7 @@ frecciaGiu.addEventListener('click', () => {
     newThumbs[currentImage].classList.add('active');
 });
 
-// vado in ascolto sulle foto in miniature e scateno un evento:
+// vado in ascolto sulle miniature e scateno un evento:
 fotoMiniature.addEventListener('click', (e) => {
     const idx = parseInt(e.target.parentElement.dataset.index);
     console.log(idx);
@@ -114,6 +122,10 @@ fotoMiniature.addEventListener('click', (e) => {
 
 });
 
+
+/* *******************************
+            FUNZIONI
+******************************* */
 
 // definisco funzione per creare elementi:
 function creaElementi(elemento, classe){
@@ -142,5 +154,6 @@ function creaTesto(){
 
 }      
 
-
-// FINE
+/* *******************************
+             FINE
+******************************* */
